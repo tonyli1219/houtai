@@ -1,6 +1,7 @@
 <template>
     <div class="login-page">
-        <el-form ref="loginform" class="loginform">
+        <el-form ref="loginform" class="login-form">
+            <div>coding实现梦想</div>
             <el-form-item label="用户名">
                 <el-input v-model="formdata.username" type="text" autocomplete="off"></el-input>
             </el-form-item>
@@ -42,5 +43,16 @@ const submitForm = (loginform: FormInstance | undefined) => {
     height: 100vh;
     background-image: url('../../assets/loginbg.jpeg');
     background-size: 100% 100%;
+    .login-form{
+        width: 300px;
+        height: 200px;
+        padding: 20px 10px;
+        background: #f6f6f660;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 </style>

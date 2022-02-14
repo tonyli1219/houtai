@@ -4,11 +4,14 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Container: typeof import('./src/components/Container/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElForm: typeof import('element-plus/es')['ElForm']
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
+    Head: typeof import('./src/components/Head/index.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Menu: typeof import('./src/components/Menu/index.vue')['default']
   }
 }
 
