@@ -6,7 +6,8 @@ declare module 'vue-router' {
       title: string
     }
 }
-export const router1: Array<RouteRecordRaw> = [
+
+export const router1: Array<any> = [
     {
         path: '/dashboard',
         name: 'dashboard',

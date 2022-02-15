@@ -8,10 +8,10 @@
                 <template #title>
                     <i class="el-icon-location"></i>
                     <!-- item.meta报可能为undefined,暂时用了可选链处理的，但是不是最终解决方案 -->
-                    <span>{{item.meta?.title}}</span>
+                    <span>{{item.meta.title}}</span>
                 </template>
                 <el-menu-item-group>
-                    <el-menu-item :index="subKey.toString()"  v-for="(subItem,subKey) in item.children" :key="subKey" @click="handleGo(item.path+'/'+subItem.path)">{{subItem.meta?.title}}</el-menu-item>
+                    <el-menu-item :index="subKey.toString()"  v-for="(subItem,subKey) in item.children" :key="subKey" @click="handleGo(item.path+'/'+subItem.path)">{{subItem.meta.title}}</el-menu-item>
                 </el-menu-item-group>
             </el-sub-menu>
         </el-menu>
@@ -23,7 +23,6 @@ import type { ElForm } from 'element-plus'
 import { router1 } from '../../router/index'
 import { useRouter } from 'vue-router'
 const baseRouter = router1
-console.log(baseRouter)
 const router = useRouter()
 type FormInstance = InstanceType<typeof ElForm>
 const formdata = reactive({
