@@ -1,16 +1,27 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 import layout from '../views/layout/index.vue'
-
+declare module 'vue-router' {
+    interface RouteMeta {
+      // 是可选的
+      title: string
+    }
+}
 export const router1: Array<RouteRecordRaw> = [
     {
         path: '/dashboard',
         name: 'dashboard',
         component: layout,
         redirect: '/dashboard/info',
+        meta: {
+            title: 'dashboard'
+        },
         children: [
             {
                 path: 'info',
                 name: 'info',
+                meta: {
+                    title: '图表数据'
+                },
                 component: () => import('../views/dashboard/index.vue')
             }
         ]
@@ -19,11 +30,17 @@ export const router1: Array<RouteRecordRaw> = [
         path: '/essay',
         name: 'essay',
         component: layout,
+        meta: {
+            title: '文章管理'
+        },
         children: [
             {
                 path: 'list',
                 name: 'list',
-                component: () => import('../views/index/index.vue')
+                meta: {
+                    title: '文章列表'
+                },
+                component: () => import('../views/essay/index.vue')
             }
         ]
     }
