@@ -42,6 +42,14 @@ export const router1: Array<any> = [
                     title: '文章列表'
                 },
                 component: () => import('../views/essay/index.vue')
+            },
+            {
+                path: 'writeessay',
+                name: 'writeessay',
+                meta: {
+                    title: '写文章', show: false
+                },
+                component: () => import('../views/essay/writeessay.vue')
             }
         ]
     }

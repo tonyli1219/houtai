@@ -3,9 +3,5 @@
   <p>sadfasdfasd</p>
   <el-button type="primary">Default</el-button>
 </template>
-<script lang="ts">
-export default {
-  setup () {
-  }
-}
+<script lang="ts" setup>
 </script>

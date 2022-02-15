@@ -1,7 +1,5 @@
 <template>
-    <div class="head-box">
-
-    </div>
+    <div>test</div>
 </template>
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
@@ -26,9 +24,3 @@ const submitForm = (loginform: FormInstance | undefined) => {
   })
 }
 </script>
-<style lang="scss" scoped>
-.head-box{
-  box-sizing: border-box;
-  box-shadow: 0px 1px 0 0;
-}
-</style>
